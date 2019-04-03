@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Monoton: 100,200,300,400,500,600,700');
+
+.header-fixed {
+	background-color:#800000;
+	box-shadow:0 1px 1px #ccc;
+	padding: 20px 40px;
+	height: 80px;
+	color: #ffffff;
+	box-sizing: border-box;
+	top:100px;
+
+	-webkit-transition:top 0.3s;
+	transition:top 0.3s;
+}
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder{
+	height: 80px;
+	display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+	float: left;
+	font-family: "Monoton", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+	color: #5383d3;
+}
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+	font-family: "Monoton", sans-serif;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+	font:16px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+}
+
+.header-fixed .header-limiter nav a{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover{
+	opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+	color: #608bd2;
+	pointer-events: none;
+	opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.different {
+	color: #FFC300;
+	pointer-events: none;
+	opacity: 1;
+}
+
+
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+	display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+	line-height: 28px;
+	font-size: 13px;
+}
+
+
+/* Making the header responsive */
+
+@media all and (max-width: 700px) {
+
+	.header-fixed {
+		padding: 20px 0;
+		height: 75px;
+	}
+
+	.header-fixed .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header-fixed .header-limiter nav {
+		line-height: 1;
+		float:none;
+	}
+
+	.header-fixed .header-limiter nav a {
+		font-size: 13px;
+	}
+
+	body.fixed .header-fixed {
+		display: none;
+	}
+
+}
+
+/*
+	 We are clearing the body's margin and padding, so that the header fits properly.
+	 We are also adding a height to demonstrate the scrolling behavior. You can remove
+	 these styles.
+ */
+ 
+ 
+ /*----------------------------------------------------------------------Work History*/
+
+.timeline-item{
+	padding: 4em 2em 0em 2em;
+    position: relative;
+    border-left: 1px solid;
+}
+
+.timeline-item p{
+    padding:0;
+    margin:0;
+}
+
+.timeline-item::before{
+    content: attr(dates);
+    position: absolute;
+    left: 2.5em;
+    top: 3em;
+    display: block;
+    font-family: "exo", sans-serif;
+    font-weight: 500;
+    font-size: .8em;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item::after{
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 2.4em;
+    position: absolute;
+    left: -6px;
+    border-radius: 12px;
+    content: '';
+    background:black;
+    
+}
+
+.img-profile {
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.history-items{
+    margin-bottom: 30px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+}
+
+.img-responsive{
+	width: 100%;
+    height: auto;
+    margin-top:10px;
+}
+
+.section-heading{
+	font-family: "monoton", sans-serif;
+}
+
+.three-reasons-heading{
+	font-family: "monoton", sans-serif;
+}
+
+
+
+/*------------------------------------------------------------MusicPage-------*/
+
+.row-music {  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+.iframe{
+    margin-left: 50px;
+    padding-left: 50px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media (min-width: 700px) {
+    .row, .navbar {   
+        flex-direction: column;
+    }
+}
+
+.image-items{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-left: 40px;
+}
+
+.audio{
+    padding-top: 10px;
+}
+
+.audio-items{
+    vertical-align: middle;
+    margin-left: 50px;
+}
+
+.list-group{
+    background-color: hidden;
+}
+
+.album-art{
+    margin-left: 80px;
+}
+
+
+
+/*----------------------------------------------------------TourTable-------*/
+
+.anniversary{
+    margin-top:10px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+
+
+
+.contact-heading{
+    font-family: "roboto" ,sans-serif;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    
+    
+}
+
+.center-form{
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 70%;
+    
+}
+
+.form-control{
+    float: left;
+    margin-bottom: 20px;
+}
+
+button[type="submit"]{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: #33ACFF;
+    color:#fafafa;
+}
+
+
+footer{
+    background-color: #800000;
+    color: #fafafa;
+    font-family: "monoton", sans-serif;
+    min-height: 120px;
+    margin: 0;
+}
+
+footer .cv-pdf i{
+    color: #fafafa;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 5px;
+    
+}
+
+footer .cv-pdf i:hover{
+    color: #e84610;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links{
+    padding-bottom: 15px;
+    
+}
+
+.social-links li a i{
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover{
+    background:#e84610;
+    
+}
+
+#footer-details{
+    margin: 20px;
+}
+
+@media(min-width: 992px){
+.section-column{
+    padding: 0 30px 30px;
+    float: none;
+    display: table-cell;
+        
+    }
